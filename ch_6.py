@@ -55,18 +55,60 @@ for name in names:
         print(f"{name.title()}, please fill out the poll.")
 
 # 6-7 People
+headmaster = {'first_name': 'albus', 'last_name': 'dumbledore', 'city': 'hogwartsville'}
+student = {'first_name': 'harry', 'last_name': 'potter', 'city': 'godric\'s hollow'}
 
+people = [headmaster, student]
+
+for person in people:
+    print(person)
 
 # 6-8 Pets
+snowball = {'species': 'dog', "owner": "lisa"}
+greg = {"species": "cat", "owner": "rodrick"}
 
+pets = [snowball, greg]
+
+for pet in pets:
+    print(pet)
 
 # 6-9 Favorite Places
-
+favorite_places = {
+    "amanda": ["paris", "london", "quebec"],
+    "bill": ["seoul", "tokyo", "beijing"],
+    "cassandra": ["cuba", "bahamas", "hawaii"]
+}
+for person, places in favorite_places.items():
+    print(f"{person.title()}'s favorite places are:")
+    for place in places:
+           print(f"\t{place.title()}")
 
 # 6-10 Favorite Numbers
-
+fav_num = {'tape': ['7', '13'],
+           'ace': ['24'],
+           'xavier': ['0', '1', '-1']
+           }
+for name, nums in fav_num.items():
+    print(f"{name.title()}'s favorite number(s):")
+    for num in nums:
+        print(f"\t{num}")
 
 # 6-11 Cities
-
-
-# 6-12 Extensions
+cities = {
+    "hartford":
+        {"country": "United States of America",
+         "population": "122,587",
+         "fact": "Hartford is the insurance capital of the world."},
+    "boston":
+        {"country": "United States of America",
+         "population": "694,583",
+         "fact": "Boston is the home to the United States' first subway."},
+    "new york city":
+        {"country": "United States of America",
+         "population": "8,399,000",
+         "fact": "New York City is the most populous city in the United States."}
+}
+for city, info in cities.items():
+    print(city.title())
+    for type, thing in info.items():
+        print(f"\t{type.title()}: {thing}")
