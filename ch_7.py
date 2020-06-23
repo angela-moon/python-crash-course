@@ -71,7 +71,7 @@ while active:
     response = input("If you could visit one place in the workd, where would you go? ")
     responses[name] = response
 
-    repeat = input("Will someone take this poll after you? (y/n) ")
+    repeat = input("Take another response? (y/n) ")
     if repeat == "n":
         active = False
 
