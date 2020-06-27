@@ -74,27 +74,53 @@ while True:
     print(new_album)
 
 # 8-9 Messages
+msgs = ["yello", "yai", "yow ya yoin'", "yis yis ya yessage"]
 
+def show_messages(messages):
+    for message in messages:
+        print(message)
+
+# show_messages(msgs)
 
 # 8-10 Sending Messages
+sent_messages = []
 
+def send_messages(to_be_sent):
+    while to_be_sent:
+        sending = to_be_sent.pop()
+        print(sending)
+        sent_messages.append(sending)
+
+# send_messages(msgs)
 
 # 8-11 Archived Messages
-
+send_messages(msgs[:])
+print(msgs)
 
 # 8-12 Sandwiches
+def make_sandwich(*items):
+    print(f"Making a sandwich with the following items:")
+    for item in items:
+        print(f"- {item}")
 
+make_sandwich("bacon", "lettuce", "tomato")
+make_sandwich("egg", "ham")
+make_sandwich("chicken")
 
 # 8-13 User Profile
+def build_profile(first, last, **user_info):
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
 
+user_profile = build_profile("bro", "is", crash_course= "trying to get my info", fav_color= "blue", clock= "ticking")
+print(user_profile)
 
 # 8-14 Cars
+def make_car(manufacturer, model_name, **kwargs):
+    kwargs['manufacturer'] = manufacturer
+    kwargs['model_name'] = model_name
+    return kwargs
 
-
-# 8-15 Printing Models
-
-
-# 8-16 Imports
-
-
-# 8-17 Styling Functions
+car1 = make_car("subaru", "outback", color="blue", tow_package=True)
+print(car1)
