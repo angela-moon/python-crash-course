@@ -29,16 +29,49 @@ make_shirt2(size="Medium")
 make_shirt2(size="Small", message="I love Java")
 
 # 8-5 Cities
+def describe_city(city, country="United States of America"):
+    print(f"{city.title()} is in {country.title()}.")
 
+describe_city("Nashua")
+describe_city("New York City")
+describe_city("London", "England")
 
 # 8-6 City Names
+def city_country(city, country):
+    print(f"{city.title()}, {country.title()}")
 
+city_country("Paris", "France")
+city_country("New York City", "United States of America")
+city_country("Seoul", "South Korea")
 
 # 8-7 Album
+def make_album(artist, album, num_songs=None):
+    new_album = {
+        "artist": artist,
+        "album": album,
+        "number of songs": num_songs
+    }
+    return new_album
 
+neo_zone = make_album("NCT 127", "NCT #127 Neo Zone")
+awaken_the_world = make_album("WayV", "WayV The 1st Album 'Awaken the World'")
+go_live = make_album("Stray Kids", "Go Live")
+print(f"{neo_zone}\n{awaken_the_world}\n{go_live}")
+
+reload = make_album("NCT DREAM", "Reload", num_songs=6)
+print(reload)
 
 # 8-8 User Albums
+while True:
+    in_artist = input("Enter the album's artist: (Please enter 'q' to quit.) ")
+    if in_artist == "q":
+        break
+    in_album = input("Enter the album's title: (Please enter 'q' to quit.) ")
+    if in_album == "q":
+        break
 
+    new_album = make_album(in_artist, in_album)
+    print(new_album)
 
 # 8-9 Messages
 
