@@ -42,6 +42,7 @@ with open(filename, "w") as file_object:
 
 # 10-6 Addition
 
+# while True:
 try:
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter another number: "))
@@ -50,3 +51,17 @@ except ValueError:
     print("Error")
 else:
     print(sum)
+
+# 10-8 Cats and Dogs
+try:
+    with open("ch_10.txt", "r") as file_object:
+        for line in file_object:
+            print(f"{line}")
+except FileNotFoundError:
+    pass
+
+# 10-9 Silent Cats and Dogs
+with open("C:/Users/angel/Downloads/package/messages/695982619917025300/messages.txt", encoding="utf-8") as f:
+    contents = f.read()
+    ngl = contents.count("ngl")
+    print(ngl)
